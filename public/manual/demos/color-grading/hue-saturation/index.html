@@ -1,0 +1,141 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=author content="Raoul van Rüschen">
+<meta name=generator content="Hugo 0.93.3">
+<title>Hue and Saturation &#183; Post Processing Manual</title><base href=//vanruesc.github.io/postprocessing/manual/>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=stylesheet href=/postprocessing/manual/css/index.84b419671cb8603118f8b10f224f90b4f5ae89aa98de1b9eac66a87a7ac2b4f8.css integrity="sha256-hLQZZxy4YDEY+LEPIk+QtPWuiaqY3huerGaoenrCtPg=">
+<script src=/postprocessing/manual/js/libs/three.384daf7a9ad419157d4e2387e33dedfc1e1eb24f936f5e24d247563d7d7b636f.js integrity="sha256-OE2veprUGRV9TiOH4z3t/B4esk+Tb14k0kdWPX17Y28="></script>
+<script src=/postprocessing/manual/js/index.a6f8cb78ef22b2cca5eacd77cb70cbff3268bc5d25e60eb11a87f5ab55140d1e.js integrity="sha256-pvjLeO8issyl6s13y3DL/zJovF0l5g6xGof1q1UUDR4="></script>
+<script src=/postprocessing/manual/js/demos/hue-saturation.d31c79d7e20236d408ea25f8b57722759a584ec7afc2e3f2370e5db6e32d7418.js integrity="sha256-0xx51+ICNtQI6iX4tXcidZpYTsevwuPyNw5dtuMtdBg="></script>
+</head><body class="preload demos single">
+<div class=frame-content>
+<div>
+<a class=skip-main href=#main>Skip to content</a>
+<div class=sidebar-button-open aria-label="Open navigation menu"></div><div class=sidebar>
+<header class=page-header>
+<h1 class=page-title>
+<a href=/postprocessing/manual/>Post Processing Manual</a>
+</h1><div class=sidebar-button-close aria-label="Close navigation menu"></div></header><nav class=navigation>
+<h2 class=main>Start</h2><ul class=menu>
+<li class=manual>
+<a href=/postprocessing/manual/>
+<span>Introduction</span>
+</a>
+</li><li class=getting-started>
+<a href=/postprocessing/manual/getting-started/>
+<span>Getting Started</span>
+</a>
+</li><li class=migration-guide>
+<a href=/postprocessing/manual/migration-guide/>
+<span>Migration Guide</span>
+</a>
+</li><li>
+<a href=../docs/ target=_blank>
+<span>API Reference</span>
+</a>
+</li></ul><h2 class=demos>Demos</h2><ul class=menu>
+<li class=anti-aliasing>
+<h3>Anti-Aliasing</h3><ul class=sub-menu>
+<li class=msaa>
+<a href=/postprocessing/manual/demos/anti-aliasing/msaa/>
+<span>MSAA</span>
+</a>
+</li><li class=smaa>
+<a href=/postprocessing/manual/demos/anti-aliasing/smaa/>
+<span>SMAA</span>
+</a>
+</li></ul></li><li class="color-grading active">
+<h3>Color Grading</h3><ul class=sub-menu>
+<li class=brightness-contrast>
+<a href=/postprocessing/manual/demos/color-grading/brightness-contrast/>
+<span>Brightness and Contrast</span>
+</a>
+</li><li class="hue-saturation active">
+<a href=/postprocessing/manual/demos/color-grading/hue-saturation/>
+<span>Hue and Saturation</span>
+</a>
+</li><li class=lut>
+<a href=/postprocessing/manual/demos/color-grading/lut/>
+<span>LUT</span>
+</a>
+</li></ul></li><li class=special-effects>
+<h3>Special Effects</h3><ul class=sub-menu>
+<li class=chromatic-aberration>
+<a href=/postprocessing/manual/demos/special-effects/chromatic-aberration/>
+<span>Chromatic Aberration</span>
+</a>
+</li><li class=color-depth>
+<a href=/postprocessing/manual/demos/special-effects/color-depth/>
+<span>Color Depth</span>
+</a>
+</li><li class=glitch>
+<a href=/postprocessing/manual/demos/special-effects/glitch/>
+<span>Glitch</span>
+</a>
+</li></ul></li><li class=utility>
+<h3>Utility</h3><ul class=sub-menu>
+<li class=blur>
+<a href=/postprocessing/manual/demos/utility/blur/>
+<span>Blur</span>
+</a>
+</li><li class=depth-picking>
+<a href=/postprocessing/manual/demos/utility/depth-picking/>
+<span>Depth Picking</span>
+</a>
+</li><li class=outline>
+<a href=/postprocessing/manual/demos/utility/outline/>
+<span>Outline</span>
+</a>
+</li><li class=texture>
+<a href=/postprocessing/manual/demos/utility/texture/>
+<span>Texture</span>
+</a>
+</li></ul></li></ul><h2 class=community>Community</h2><ul class=menu>
+<li class=plugins-tools>
+<a href=/postprocessing/manual/plugins-tools/>
+<span>Plugins and Tools</span>
+</a>
+</li><li>
+<a href=https://github.com/vanruesc/postprocessing/issues target=_blank>
+<span>Issue Tracker</span>
+</a>
+</li><li>
+<a href=https://github.com/vanruesc/postprocessing/discussions target=_blank>
+<span>Forum</span>
+</a>
+</li></ul></nav><footer class=page-footer>
+<div class=contentinfo>
+<ul class=menu>
+<li class=legal>
+<a href=/postprocessing/manual/legal/>
+<span>Legal</span>
+</a>
+</li><li class=privacy>
+<a href=/postprocessing/manual/privacy/>
+<span>Privacy Policy</span>
+</a>
+</li></ul></div><div class=icons>
+<div class=dark-mode title="Dark mode"></div><a href=https://github.com/vanruesc/postprocessing>
+<div class=repository title=Repository></div></a>
+<a href=https://www.patreon.com/vanruesc>
+<div class=support title=Support></div></a>
+</div></footer></div><main id=main class=hue-saturation tabindex=-1>
+<div class="viewport loading">
+<div class=progress aria-label=loading>
+<div class="spinner cubegrid">
+<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div class=icons>
+<div class="icon fullscreen" title=Fullscreen></div><a class=icon href=https://github.com/vanruesc/postprocessing/tree/main/manual/js/src/demos/hue-saturation.js target=_blank title=Code>
+<div class="icon code"></div></a>
+</div><div class=tp></div><div class="warning hidden" aria-label=Warning>
+<h4>Warning</h4><p>The following contains flashing imagery that may cause discomfort and/or seizures for those with photosensitive epilepsy.</p><a>Continue</a>
+</div><div class="error hidden" aria-label=Error>
+<h4>Error</h4><p></p></div></div><div class=content>
+<div>
+<h1 id=hue--saturation>
+Hue & Saturation <a href=/postprocessing/manual/demos/color-grading/hue-saturation/#hue--saturation>¶</a>
+</h1><h3 id=external-resources>
+External Resources <a href=/postprocessing/manual/demos/color-grading/hue-saturation/#external-resources>¶</a>
+</h3></div></div></main></div></div></body></html>

@@ -1,0 +1,139 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=author content="Raoul van Rüschen">
+<meta name=generator content="Hugo 0.93.3">
+<title>Introduction &#183; Post Processing Manual</title><base href=//vanruesc.github.io/postprocessing/manual/>
+<link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+<link rel=stylesheet href=/postprocessing/manual/css/index.84b419671cb8603118f8b10f224f90b4f5ae89aa98de1b9eac66a87a7ac2b4f8.css integrity="sha256-hLQZZxy4YDEY+LEPIk+QtPWuiaqY3huerGaoenrCtPg=">
+<script src=/postprocessing/manual/js/libs/three.384daf7a9ad419157d4e2387e33dedfc1e1eb24f936f5e24d247563d7d7b636f.js integrity="sha256-OE2veprUGRV9TiOH4z3t/B4esk+Tb14k0kdWPX17Y28="></script>
+<script src=/postprocessing/manual/js/index.a6f8cb78ef22b2cca5eacd77cb70cbff3268bc5d25e60eb11a87f5ab55140d1e.js integrity="sha256-pvjLeO8issyl6s13y3DL/zJovF0l5g6xGof1q1UUDR4="></script>
+</head><body class="preload home">
+<div class=frame-content>
+<div>
+<a class=skip-main href=#main>Skip to content</a>
+<div class=sidebar-button-open aria-label="Open navigation menu"></div><div class=sidebar>
+<header class=page-header>
+<h1 class=page-title>
+<a href=/postprocessing/manual/>Post Processing Manual</a>
+</h1><div class=sidebar-button-close aria-label="Close navigation menu"></div></header><nav class=navigation>
+<h2 class=main>Start</h2><ul class=menu>
+<li class="manual active">
+<a href=/postprocessing/manual/>
+<span>Introduction</span>
+</a>
+</li><li class=getting-started>
+<a href=/postprocessing/manual/getting-started/>
+<span>Getting Started</span>
+</a>
+</li><li class=migration-guide>
+<a href=/postprocessing/manual/migration-guide/>
+<span>Migration Guide</span>
+</a>
+</li><li>
+<a href=../docs/ target=_blank>
+<span>API Reference</span>
+</a>
+</li></ul><h2 class=demos>Demos</h2><ul class=menu>
+<li class=anti-aliasing>
+<h3>Anti-Aliasing</h3><ul class=sub-menu>
+<li class=msaa>
+<a href=/postprocessing/manual/demos/anti-aliasing/msaa/>
+<span>MSAA</span>
+</a>
+</li><li class=smaa>
+<a href=/postprocessing/manual/demos/anti-aliasing/smaa/>
+<span>SMAA</span>
+</a>
+</li></ul></li><li class=color-grading>
+<h3>Color Grading</h3><ul class=sub-menu>
+<li class=brightness-contrast>
+<a href=/postprocessing/manual/demos/color-grading/brightness-contrast/>
+<span>Brightness and Contrast</span>
+</a>
+</li><li class=hue-saturation>
+<a href=/postprocessing/manual/demos/color-grading/hue-saturation/>
+<span>Hue and Saturation</span>
+</a>
+</li><li class=lut>
+<a href=/postprocessing/manual/demos/color-grading/lut/>
+<span>LUT</span>
+</a>
+</li></ul></li><li class=special-effects>
+<h3>Special Effects</h3><ul class=sub-menu>
+<li class=chromatic-aberration>
+<a href=/postprocessing/manual/demos/special-effects/chromatic-aberration/>
+<span>Chromatic Aberration</span>
+</a>
+</li><li class=color-depth>
+<a href=/postprocessing/manual/demos/special-effects/color-depth/>
+<span>Color Depth</span>
+</a>
+</li><li class=glitch>
+<a href=/postprocessing/manual/demos/special-effects/glitch/>
+<span>Glitch</span>
+</a>
+</li></ul></li><li class=utility>
+<h3>Utility</h3><ul class=sub-menu>
+<li class=blur>
+<a href=/postprocessing/manual/demos/utility/blur/>
+<span>Blur</span>
+</a>
+</li><li class=depth-picking>
+<a href=/postprocessing/manual/demos/utility/depth-picking/>
+<span>Depth Picking</span>
+</a>
+</li><li class=outline>
+<a href=/postprocessing/manual/demos/utility/outline/>
+<span>Outline</span>
+</a>
+</li><li class=texture>
+<a href=/postprocessing/manual/demos/utility/texture/>
+<span>Texture</span>
+</a>
+</li></ul></li></ul><h2 class=community>Community</h2><ul class=menu>
+<li class=plugins-tools>
+<a href=/postprocessing/manual/plugins-tools/>
+<span>Plugins and Tools</span>
+</a>
+</li><li>
+<a href=https://github.com/vanruesc/postprocessing/issues target=_blank>
+<span>Issue Tracker</span>
+</a>
+</li><li>
+<a href=https://github.com/vanruesc/postprocessing/discussions target=_blank>
+<span>Forum</span>
+</a>
+</li></ul></nav><footer class=page-footer>
+<div class=contentinfo>
+<ul class=menu>
+<li class=legal>
+<a href=/postprocessing/manual/legal/>
+<span>Legal</span>
+</a>
+</li><li class=privacy>
+<a href=/postprocessing/manual/privacy/>
+<span>Privacy Policy</span>
+</a>
+</li></ul></div><div class=icons>
+<div class=dark-mode title="Dark mode"></div><a href=https://github.com/vanruesc/postprocessing>
+<div class=repository title=Repository></div></a>
+<a href=https://www.patreon.com/vanruesc>
+<div class=support title=Support></div></a>
+</div></footer></div><main id=main tabindex=-1>
+<div class=content>
+<div>
+<h1 id=introduction>
+Introduction <a href=/postprocessing/manual/#introduction>¶</a>
+</h1><p><a href=https://github.com/vanruesc/postprocessing/actions/workflows/ci.yml><img src=https://github.com/vanruesc/postprocessing/actions/workflows/ci.yml/badge.svg alt=CI></a></p><p>Welcome to the <code>postprocessing</code> manual!</p><h2 id=motivation>
+Motivation <a href=/postprocessing/manual/#motivation>¶</a>
+</h2><p>The purpose of <code>postprocessing</code> is to provide a package of advanced, well maintained and fully documented filter effects for the popular 3D library <a href=https://threejs.org/>three.js</a>. It was originally created based on the <a href="https://threejs.org/examples/?q=postprocessing">three.js examples</a> in the context of a university research project in 2015 and continues to evolve as a free, open-source library.</p><h2 id=compatibility>
+Compatibility <a href=/postprocessing/manual/#compatibility>¶</a>
+</h2><p>The compatibility policy of <code>postprocessing</code> is to support the 6 most recent releases of <code>three</code>. The release schedule of this library is not strictly tied to <code>three</code>, meaning that official support for the latest release can lag behind by a few days. Releases follow <a href=https://semver.org/>semantic versioning</a>.</p><p><em>Please note that this library is not compatible with the postprocessing examples from <code>three</code> due to API differences.</em></p><h2 id=concepts>
+Concepts <a href=/postprocessing/manual/#concepts>¶</a>
+</h2><p>WIP</p><h2 id=output-encoding>
+Output Encoding <a href=/postprocessing/manual/#output-encoding>¶</a>
+</h2><p>New applications should follow a <a href=https://docs.unity3d.com/Manual/LinearRendering-LinearOrGammaWorkflow.html>linear workflow</a> for color management and <code>postprocessing</code> supports this automatically. Simply set <code>WebGLRenderer.outputEncoding</code> to <code>sRGBEncoding</code> and <code>postprocessing</code> will follow suit. Built-in passes automatically encode colors when they render to screen and internal render operations are always performed in linear color space.</p><h2 id=performance>
+Performance <a href=/postprocessing/manual/#performance>¶</a>
+</h2><p>This library provides a specialized <code>EffectPass</code> that offers a structured and well defined mechanism for merging fullscreen effects into a single compound shader. This minimizes the amount of render operations and makes it possible to combine many effects without the performance penalties of traditional pass chaining. Additionally, every effect can choose its own blend function.</p><p>All fullscreen render operations also use a <a href=https://michaldrobot.com/2014/04/01/gcn-execution-patterns-in-full-screen-passes/>single triangle</a> that fills the screen. Compared to using a quad, this approach harmonizes with modern GPU rasterization patterns and eliminates unnecessary fragment calculations along the screen diagonal. This is especially beneficial for GPGPU passes and effects that use complex fragment shaders.</p></div></div></main></div></div></body></html>
