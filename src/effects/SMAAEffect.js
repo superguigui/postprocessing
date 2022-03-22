@@ -144,7 +144,7 @@ export class SMAAEffect extends Effect {
 			const onSMAAImageLoaded = () => {
 
 				nbImagesLoaded++;
-				if (nbImagesLoaded === 2) this.dispatchEvent("load");
+				if (nbImagesLoaded === 2) this.dispatchEvent({ type: "load" });
 
 			}
 
