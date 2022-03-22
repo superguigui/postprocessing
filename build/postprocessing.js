@@ -1,5 +1,5 @@
 /**
- * postprocessing v6.26.1 build Tue Mar 22 2022
+ * postprocessing v6.26.2 build Tue Mar 22 2022
  * https://github.com/pmndrs/postprocessing
  * Copyright 2015-2022 Raoul van Rüschen
  * @license Zlib
@@ -6634,7 +6634,7 @@ var POSTPROCESSING = (() => {
         const onSMAAImageLoaded = () => {
           nbImagesLoaded++;
           if (nbImagesLoaded === 2)
-            this.dispatchEvent("load");
+            this.dispatchEvent({ type: "load" });
         };
         searchImage.addEventListener("load", () => {
           const searchTexture = new import_three59.Texture(searchImage);
