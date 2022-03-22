@@ -35,7 +35,6 @@ package-lock.json
 manual/assets/css/
 manual/assets/js/
 manual/resources/
-build/
 public/
 tmp/
 *.lock
